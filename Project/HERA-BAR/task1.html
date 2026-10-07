@@ -1,170 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HERA-BAR</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
       theme: {
-      extend: {
-        fontFamily: {
-          display: ['Fraunces', 'serif'],
-          sans: ['"DM Sans"', 'sans-serif']
-            }
+        extend: {
+          fontFamily: {
+            display: ['Fraunces', 'serif'],
+            sans: ['"DM Sans"', 'sans-serif']
           }
         }
       }
-      </script> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+    };
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-<body class="w-full min-h-screen bg-amber-950 overflow-x-hidden">
-    <nav class="w-full min-h-[50px] bg-green-950 text-white py-[40px] flex justify-between px-[30px]">
-        <h2 class="font-display font-black tracking-wide text-[clamp(1.2rem,5vw,2.7rem)] leading-tight text-amber-100">
-            HERA-BAR
-        </h2>
-        <div class="icon">
-            <i class="fa-regular fa-heart text-xl" style="color: rgb(248, 241, 182);"></i>
-            <i class="fa-solid fa-basket-shopping text-xl" style="color: rgb(243, 251, 180);"></i>
-        </div>
-    </nav>
-    <div class="relative mb-3 py-[clamp(0.9rem,5vw,2rem)] px-[clamp(1rem,5vw,2rem)] rounded-xl overflow-hidden h-[clamp(30rem,50vw,100rem)] w-full flex justify-center">
-        <div class="slider flex w-[80%] h-full overflow-x-auto snap-x snap-mandatory scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          <img class="w-full h-full shrink-0 snap-center object-cover" src="https://i.pinimg.com/1200x/9f/5d/a8/9f5da8c442576b4a5714774c3f45e41a.jpg" alt="Coffee 1">
-          <img class="w-full h-full shrink-0 snap-center object-cover" src="https://i.pinimg.com/736x/ee/f7/4a/eef74a9686443f5de2f044a32c669bc6.jpg" alt="Coffee 2">
-          <img class="w-full h-full shrink-0 snap-center object-cover" src="https://i.pinimg.com/1200x/3e/d5/d5/3ed5d58af2019f00b53e4b07b8216400.jpg" alt="Coffee 3">
-        </div>
-        <!-- arrows -->
-        <button type="button" class="prev absolute left-2 top-1/2 -translate-y-1/2 w-15 h-15 rounded-full bg-amber-950/70 text-amber-50">‹</button>
-        <button type="button" class="next absolute right-2 top-1/2 -translate-y-1/2 w-15 h-15 rounded-full bg-amber-950/70 text-amber-50">›</button>
 
+<body class="w-full min-h-screen bg-amber-950 overflow-x-hidden font-sans">
+
+  <nav class="w-full bg-green-950 text-white py-[40px] px-[30px] flex items-center justify-between">
+    <h2 class="font-display font-black tracking-wide text-[clamp(1.2rem,5vw,2.7rem)] leading-tight text-amber-100">
+      HERA-BAR
+    </h2>
+    <div class="flex items-center gap-4 text-xl text-amber-100">
+      <i class="fa-regular fa-heart"></i>
+      <i class="fa-solid fa-basket-shopping"></i>
     </div>
-    <main>
-        <div class="w-full py-[clamp(0.7rem,5vw,1.8rem)] px-[clamp(1rem,5vw,3rem)]">
-            <h1 class="font-display font-black tracking-wide text-[clamp(1.2rem,5vw,1.8rem)] leading-tight text-amber-100 mb-[20px]">OUR MENU COLLECTION</h1>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 py-[clamp(0.5rem,4vw,2rem)] px-[clamp(0.5rem,5vw,1.8rem)]">
+  </nav>
 
-                <div class="bg-amber-100 text-amber-950 p-5 rounded-xl min-h-[400px] flex flex-col">
-              
-                  <div class="mb-5 overflow-hidden rounded-xl aspect-[4/4]">
-                    <img class="w-full h-full object-cover"
-                         src="https://i.pinimg.com/736x/d0/04/43/d00443464e08404a94111d5da1843131.jpg"
-                         alt="Coffee collection">
-                  </div>
-              
-                  <div class="flex flex-col flex-1">
-                    <h2 class="font-bold">COFFEE COLLECTION</h2>
-                    <p class="text-xs mb-2">GRAB YOUR BEST COFFEE OF THE DAY BEFORE YOU START YOUR PRODUCTIVE DAY.</p>
-              
-                    <div class="flex gap-2 mb-4 text-xs">
-                      <p class="py-[5px] px-[10px] bg-amber-950 text-amber-50 rounded-xl">Hot</p>
-                      <p class="py-[5px] px-[10px] bg-amber-950 text-amber-50 rounded-xl">Fresh</p>
-                    </div>
-              
-                    <a href="task1link.html"
-                       class="self-start py-3 px-5 bg-amber-950 text-amber-50 rounded-xl text-xs">
-                      DETAILS
-                    </a>
-                  </div>
-              
-                </div>
-                <div class="bg-amber-100 text-amber-950 p-5 rounded-xl min-h-[400px] flex flex-col">
-              
-                  <div class="mb-5 overflow-hidden rounded-xl aspect-[4/4]">
-                    <img class="w-full h-full object-cover"
-                         src="https://i.pinimg.com/736x/fe/14/2f/fe142fc4e9f33c5aeb3c29f46348a5a6.jpg"
-                         alt="Matcha collection">
-                  </div>
-              
-                  <div class="flex flex-col flex-1">
-                    <h2 class="font-bold">MATCHA COLLECTION</h2>
-                    <p class="text-xs mb-2">GRAB YOUR WONDERFUL MATCHA HERE. WE BRING UR FAV MATCHA EVER.</p>
-              
-                    <div class="flex gap-2 mb-4 text-xs">
-                      <p class="py-[5px] px-[10px] bg-amber-950 text-amber-50 rounded-xl">Hot</p>
-                      <p class="py-[5px] px-[10px] bg-amber-950 text-amber-50 rounded-xl">Fresh</p>
-                    </div>
-              
-                    <a href="task1link.html"
-                       class="self-start py-3 px-5 bg-amber-950 text-amber-50 rounded-xl text-xs">
-                      DETAILS
-                    </a>
-                  </div>
-              
-                </div>
-                <div class="bg-amber-100 text-amber-950 p-5 rounded-xl min-h-[400px] flex flex-col">
-              
-                  <div class="mb-5 overflow-hidden rounded-xl aspect-[4/4]">
-                    <img class="w-full h-full object-cover"
-                         src="https://i.pinimg.com/1200x/eb/a5/16/eba5161ea7fc4cb5c287578385386ea7.jpg"
-                         alt="Tea collection">
-                  </div>
-              
-                  <div class="flex flex-col flex-1">
-                    <h2 class="font-bold">Tea COLLECTION</h2>
-                    <p class="text-xs mb-2">WHATEVER WATHEVER JUST GIVE ME A CUP OF TEA</p>
-              
-                    <div class="flex gap-2 mb-4 text-xs">
-                      <p class="py-[5px] px-[10px] bg-amber-950 text-amber-50 rounded-xl">Hot</p>
-                      <p class="py-[5px] px-[10px] bg-amber-950 text-amber-50 rounded-xl">Fresh</p>
-                    </div>
-              
-                    <a href="task1link.html"
-                       class="self-start py-3 px-5 bg-amber-950 text-amber-50 rounded-xl text-xs">
-                      DETAILS
-                    </a>
-                  </div>
-              
-                </div>
-                <div class="bg-amber-100 text-amber-950 p-5 rounded-xl min-h-[400px] flex flex-col">
-              
-                  <div class="mb-5 overflow-hidden rounded-xl aspect-[4/4]">
-                    <img class="w-full h-full object-cover"
-                         src="https://i.pinimg.com/1200x/3c/3b/f7/3c3bf76c3bbdc6eed97b591ade126fc3.jpg"
-                         alt="Pistory collection">
-                  </div>
-              
-                  <div class="flex flex-col flex-1">
-                    <h2 class="font-bold">PISTERY COLLECTION</h2>
-                    <p class="text-xs mb-2">BREAKFAST, LANCH, SNACK. We here to get your fav menu. pick whatever u want money will come but food is never taste the same as today</p>
-              
-                    <div class="flex gap-2 mb-4 text-xs">
-                      <p class="py-[5px] px-[10px] bg-amber-950 text-amber-50 rounded-xl">Hot</p>
-                      <p class="py-[5px] px-[10px] bg-amber-950 text-amber-50 rounded-xl">Fresh</p>
-                    </div>
-              
-                    <a href="task1link.html"
-                       class="self-start py-3 px-5 bg-amber-950 text-amber-50 rounded-xl text-xs">
-                      DETAILS
-                    </a>
-                  </div>
-              
-                </div>
-                
+  <main>
+    <div class="w-full py-[clamp(0.7rem,5vw,1.8rem)] px-[clamp(1rem,5vw,3rem)]">
+      <h1 class="font-display font-black tracking-wide text-[clamp(1.2rem,5vw,1.8rem)] leading-tight text-amber-100 mb-[20px]">
+        OUR MENU COLLECTION
+      </h1>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 py-[clamp(0.5rem,4vw,2rem)] px-[clamp(0.5rem,5vw,1.8rem)]">
+
+        <div class="bg-amber-100 text-amber-950 p-5 rounded-xl min-h-[400px] flex flex-col">
+          <div class="mb-5 overflow-hidden rounded-xl aspect-square">
+            <img class="w-full h-full object-cover"
+                 src="https://i.pinimg.com/736x/d0/04/43/d00443464e08404a94111d5da1843131.jpg"
+                 alt="Coffee collection">
+          </div>
+          <div class="flex flex-col flex-1">
+            <h2 class="font-bold">COFFEE COLLECTION</h2>
+            <p class="text-xs mb-2">GRAB YOUR BEST COFFEE OF THE DAY BEFORE YOU START YOUR PRODUCTIVE DAY.</p>
+            <div class="flex gap-2 mb-4 text-xs">
+              <span class="py-[5px] px-[10px] bg-amber-950 text-amber-50 rounded-xl">Hot</span>
+              <span class="py-[5px] px-[10px] bg-amber-950 text-amber-50 rounded-xl">Fresh</span>
             </div>
+            <a href="task1link.html" class="self-start mt-auto py-3 px-5 bg-amber-950 text-amber-50 rounded-xl text-xs">DETAILS</a>
+          </div>
         </div>
-    </main>
-    <footer class="w-full h-[clamp(200px,50vw,600px)] bg-green-950">
-    <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 ">
-      <div class="py-[clamp(200px,40vw,600px)] px-[clamp(200px,40vw,600px)]">
+
+        <div class="bg-amber-100 text-amber-950 p-5 rounded-xl min-h-[400px] flex flex-col">
+          <div class="mb-5 overflow-hidden rounded-xl aspect-square">
+            <img class="w-full h-full object-cover"
+                 src="https://i.pinimg.com/736x/fe/14/2f/fe142fc4e9f33c5aeb3c29f46348a5a6.jpg"
+                 alt="Matcha collection">
+          </div>
+          <div class="flex flex-col flex-1">
+            <h2 class="font-bold">MATCHA COLLECTION</h2>
+            <p class="text-xs mb-2">GRAB YOUR WONDERFUL MATCHA HERE. WE BRING UR FAV MATCHA EVER.</p>
+            <div class="flex gap-2 mb-4 text-xs">
+              <span class="py-[5px] px-[10px] bg-amber-950 text-amber-50 rounded-xl">Hot</span>
+              <span class="py-[5px] px-[10px] bg-amber-950 text-amber-50 rounded-xl">Fresh</span>
+            </div>
+            <a href="task1link.html" class="self-start mt-auto py-3 px-5 bg-amber-950 text-amber-50 rounded-xl text-xs">DETAILS</a>
+          </div>
+        </div>
+
+        <div class="bg-amber-100 text-amber-950 p-5 rounded-xl min-h-[400px] flex flex-col">
+          <div class="mb-5 overflow-hidden rounded-xl aspect-square">
+            <img class="w-full h-full object-cover"
+                 src="https://i.pinimg.com/1200x/eb/a5/16/eba5161ea7fc4cb5c287578385386ea7.jpg"
+                 alt="Tea collection">
+          </div>
+          <div class="flex flex-col flex-1">
+            <h2 class="font-bold">TEA COLLECTION</h2>
+            <p class="text-xs mb-2">WHATEVER, WHATEVER, JUST GIVE ME A CUP OF TEA.</p>
+            <div class="flex gap-2 mb-4 text-xs">
+              <span class="py-[5px] px-[10px] bg-amber-950 text-amber-50 rounded-xl">Hot</span>
+              <span class="py-[5px] px-[10px] bg-amber-950 text-amber-50 rounded-xl">Fresh</span>
+            </div>
+            <a href="task1link.html" class="self-start mt-auto py-3 px-5 bg-amber-950 text-amber-50 rounded-xl text-xs">DETAILS</a>
+          </div>
+        </div>
+
+        <div class="bg-amber-100 text-amber-950 p-5 rounded-xl min-h-[400px] flex flex-col">
+          <div class="mb-5 overflow-hidden rounded-xl aspect-square">
+            <img class="w-full h-full object-cover"
+                 src="https://i.pinimg.com/1200x/3c/3b/f7/3c3bf76c3bbdc6eed97b591ade126fc3.jpg"
+                 alt="Pastry collection">
+          </div>
+          <div class="flex flex-col flex-1">
+            <h2 class="font-bold">PASTRY COLLECTION</h2>
+            <p class="text-xs mb-2">BREAKFAST, LUNCH, SNACK. We are here to get your fav menu. Pick whatever u want, money will come but food is never the same as today.</p>
+            <div class="flex gap-2 mb-4 text-xs">
+              <span class="py-[5px] px-[10px] bg-amber-950 text-amber-50 rounded-xl">Hot</span>
+              <span class="py-[5px] px-[10px] bg-amber-950 text-amber-50 rounded-xl">Fresh</span>
+            </div>
+            <a href="task1link.html" class="self-start mt-auto py-3 px-5 bg-amber-950 text-amber-50 rounded-xl text-xs">DETAILS</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="w-full min-h-[400px] bg-green-950 flex items-center px-[clamp(15px,5vw,30px)] py-[clamp(15px,5vw,30px)]">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
+      <div class="p-5">
         <h2 class="font-display font-black tracking-wide text-[clamp(1.2rem,5vw,2.7rem)] leading-tight text-amber-100">
           HERA-BAR
         </h2>
       </div>
+      <div class="p-5 bg-amber-50"></div>
+      <div class="p-5 bg-amber-50"></div>
     </div>
-    </footer>
+  </footer>
+
 </body>
-<script>
-    document.querySelectorAll('.slider').forEach(slider => {
-      const box = slider.parentElement;
-      box.querySelector('.prev').addEventListener('click', () =>
-        slider.scrollBy({ left: -slider.clientWidth, behavior: 'smooth' }));
-      box.querySelector('.next').addEventListener('click', () =>
-        slider.scrollBy({ left: slider.clientWidth, behavior: 'smooth' }));
-    });
-  </script>
 </html>
